@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<c3p0-config>
+    <default-config>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/cjxy?serverTimezone=GMT%2B8
+        </property>
+        <property name="user">root</property>
+        <property name="password">15935728qaz</property>
+        <property name="checkoutTimeout">300000</property>
+        <property name="initialPoolSize">10</property>
+        <!-- :连接的最大空闲时间，如果超过这个时间，某个数据库连接还没有被使用，则会断开掉这个连接。如果为0，则永远不会断开连接,即回收此连接。default : 0 单位 s（建议使用） -->
+        <property name="maxIdleTime">0</property>
+        <!-- 最大连接数 -->
+        <property name="maxPoolSize">100</property>
+        <!-- 最小连接数 -->
+        <property name="minPoolSize">10</property>
+        <property name="maxStatements">200</property>
+    </default-config>
+    <named-config name="itcast">
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/cjxy?serverTimezone=GMT%2B8
+        </property>
+        <property name="user">root</property>
+        <property name="password">15935728qaz</property>
+        <property name="initialPoolSize">15</property>
+        <property name="maxPoolSize">15</property>
+    </named-config>
+</c3p0-config>
